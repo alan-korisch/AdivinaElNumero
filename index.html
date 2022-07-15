@@ -20,15 +20,24 @@
         }
 
         var numeroPensado = Math.round(Math.random() *10);
-        var numeroLanzado = parseInt(prompt("Escriba un numero del 1 al 10"));
+       
+        var intentos = 3;
+        var contador = 1;  
         
-        if (numeroPensado == numeroLanzado) {
-            imprimir("acertaste");
-        } else {
-            imprimir("usted no acertó, el numero pensado era " + numeroPensado);
+        while (contador <= intentos) {
+        var numeroLanzado = parseInt(prompt("Escriba un numero del 1 al 10"));
+            if (numeroPensado == numeroLanzado) {
+                alert("acertaste, en el intento " + contador + " y el numero pensado era: " + numeroPensado); 
+                break;
+                
+            } else {
+
+                alert("usted no acerto, probá de nuevo");
+            }
+            contador++;
         }
 
-
+        imprimir("fin");
 
 
 
